@@ -1,0 +1,15 @@
+#Return indices of two nos. adding upto target
+class Solution{
+  public int[] twoSum(int[] nums, int[]target) {
+    for(i=0; i<nums.length;i++) {
+      for(j=i+1; j<nums.length; j++) {
+        int comp = target - nums[i];
+        
+        if (nums[j]==comp) {
+          return new int[] {i,j};
+        }
+      }
+    }
+    throw IllegalArgumentException("Not found");
+  }
+}
