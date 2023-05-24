@@ -13,3 +13,4 @@ class Solution{
     throw IllegalArgumentException("Not found");
   }
 }
+
