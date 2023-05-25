@@ -1,0 +1,67 @@
+public class Main {
+    public static void main(String[] args) {
+
+        int myAge = calAge(1997);
+        System.out.println("Age is "+myAge);
+        //System.out.println("Age is "+calAge(1997)); //This will also work same as above
+
+
+        /*boolean gameOver = true;
+        int score = 10000;
+        int levelCompleted = 8;
+        int bonus = 200;
+        */
+
+       /* if(score<5000 && score> 1000){
+            System.out.println("Score >1k but less than 5k");
+        } else if (score<1000) {
+            System.out.println("Score <1k");
+
+        } else{
+            System.out.println("Got it");
+        }*/
+
+        //int finalScore = score;
+        //calculateScore();
+        //calculateScore2();
+
+        calculateScore2(true, 80000, 10, 50);
+
+        /*if(gameOver ==true){
+            finalScore += (levelCompleted*bonus);
+            System.out.println("Final score "+finalScore);
+        }*/
+    }
+
+    //method without parameters
+    /*public static void  calculateScore(){ //method named calculateScore
+        boolean gameOver = true;
+        int score = 10000;
+        int levelCompleted = 2;
+        int bonus = 200;
+        int finalScore = score;
+
+        if(gameOver ==true){
+            finalScore += (levelCompleted*bonus);
+            System.out.println("Final score "+finalScore);
+        }
+    }*/
+
+    //method with parameters
+
+    public static void  calculateScore2(boolean gameOver, int Score, int levelCompleted, int bonus){ //method named calculateScore
+
+        int finalScore = Score;
+
+        if(gameOver ==true){
+            finalScore += (levelCompleted*bonus);
+            System.out.println("Final score "+finalScore);
+        }
+    }
+
+    public static int calAge(int dob){
+
+        return (2023-dob);
+
+    }
+}
