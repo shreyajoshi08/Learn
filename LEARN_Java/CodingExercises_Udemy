@@ -1,0 +1,43 @@
+import com.sun.jdi.PathSearchingVirtualMachine;
+
+//sCoding Exercise
+public class PositiveNegativeZero {
+
+    public static void main(String[] args) {
+        //checkNumber(4);
+        printConversion(1.5);
+    }
+
+    public static void checkNumber(int number){
+        if (number >0){
+            System.out.println("positive");
+        } else if (number <0){
+            System.out.println("negative");
+        }else {
+            System.out.println("zeros");
+        }
+    }
+
+    public static long toMilesPerHour(double kilometersPerHour) {
+        long value = 0;
+        if (kilometersPerHour < 0){
+            value = -1;
+            return value;
+        }else{
+            value = Math.round (kilometersPerHour/1.609);
+            return value;
+        }
+
+    }
+
+    public static void printConversion(double kilometersPerHour) {
+
+        if (kilometersPerHour < 0){
+            System.out.println("Invalid");
+        }else{
+            long milesPerHour = toMilesPerHour(kilometersPerHour);
+            System.out.println(kilometersPerHour +" km/h = "+ milesPerHour+" mi/h");
+        }
+
+    }
+}
