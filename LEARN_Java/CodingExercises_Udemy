@@ -1,6 +1,6 @@
 import com.sun.jdi.PathSearchingVirtualMachine;
 
-//sCoding Exercise
+//Coding Exercise
 public class PositiveNegativeZero {
 
     public static void main(String[] args) {
