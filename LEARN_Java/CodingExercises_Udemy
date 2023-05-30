@@ -54,8 +54,7 @@ public class PositiveNegativeZero {
      
      
  }
- 
-    public static boolean shouldWakeUp(boolean barking, int hourOfDay){
+ public static boolean shouldWakeUp(boolean barking, int hourOfDay){
         boolean wakeUp = false;
         if (hourOfDay >= 0 && hourOfDay <=23){
             if ((hourOfDay<8 || hourOfDay>22) && barking){
@@ -68,6 +67,33 @@ public class PositiveNegativeZero {
             return false;
         } 
     }
- 
+
+public static boolean isLeapYear( int year){
+        
+        if( year >= 1 && year <= 9999){
+            
+            if( year % 4 == 0 && year %2 == 0){
+            
+                if( year % 100 == 0 && year %2 == 0){
+                
+                     if( year % 400 == 0 && year %2 == 0){
+                         return true;  
+                         
+                    }else return false;
+                    
+                }else return true;
+                
+                
+            }
+             
+            else{
+                return false;
+            }
+            
+        } 
+        else
+        return false;
+        
+    }
  
 }
