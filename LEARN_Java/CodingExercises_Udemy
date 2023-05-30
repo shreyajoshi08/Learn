@@ -95,5 +95,25 @@ public static boolean isLeapYear( int year){
         return false;
         
     }
+  
+    public static boolean areEqualByThreeDecimalPlaces( double num1, double num2){
+        num1 = (int) (num1 * 1000);
+        num2 = (int) (num2 * 1000);
+        if ( num1 == num2){
+            
+            return true;
+            
+        }else return false;
+        
+    }
+    
+    
+    public static boolean hasEqualSum (int a, int b, int c){
+        int sum = a+b;
+        if(sum==c){
+            return true;
+        } else return false;
+    }
+
  
 }
