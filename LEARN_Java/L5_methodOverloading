@@ -1,0 +1,21 @@
+public class MethodOverloading {
+
+    public static double convertToCentimeters(double height_in_inches){
+        double inches_to_cm = height_in_inches*2.54;
+        return inches_to_cm;
+    }
+
+    public static double convertToCentimeters(int height_in_ft, int rem_height_in_inches){
+        double ft_to_inches = height_in_ft*12;
+        double total_inches = ft_to_inches + rem_height_in_inches;
+
+         double total_cm =  convertToCentimeters(total_inches);
+         System.out.println(height_in_ft+" ft and "+ rem_height_in_inches +" inch equals = "+ total_cm+" cm.");
+         return total_cm;
+    }
+
+    public static void main(String[] args) {
+        convertToCentimeters(5,8);
+    }
+
+}
