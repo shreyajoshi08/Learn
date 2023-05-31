@@ -1,21 +1,26 @@
 public class SecondsAndMinutes {
 
     public static void main(String[] args) {
-        System.out.println("7200 seconds = "+getDurationString(7200)+" hrs.");
-        System.out.println(" 720 mins and 51 secs = "+getDurationString(720,121 )+ " hrs.");
-
+        getDurationString(3945);
+        getDurationString(126,59);
     }
 
     public static String getDurationString(int seconds){
         if (seconds>=0){
-            return String.valueOf(( seconds/3600));
-        }
+            int hour1 = seconds/3600;
+            System.out.println("hours = "+hour1);
+            return "";
+        } else return "Invalid";
     }
     public static String getDurationString(int minutes, int seconds){
         if ((seconds>=0 && seconds<=59) && minutes>=0){
-            int total_secs = (minutes*60)+seconds; //total secs overall are calculated.
-            String z =   String.valueOf(getDurationString(total_secs));
-            return (z+"hrs " +minutes"mins " +seconds+" secs.")
+            int total_secs = (minutes*60)+seconds; //125 mins 30 secs = 7530
+            int hour  = total_secs/3600;
+            int rem_mins = (total_secs%3600)/60;
+            int rem_secs = total_secs%60;
+
+            System.out.println(hour+"hr "+rem_mins+"m "+rem_secs+"s");
+            return "";//hour+"h "+ rem_mins+"m"+rem_secs+"s";
         }
         else{
             return "Invalid String";
