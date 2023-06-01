@@ -2,7 +2,7 @@ public class SecondsAndMinutes {
 
     public static void main(String[] args) {
         getDurationString(3945);
-        getDurationString(126,59);
+        getDurationString(65,19);
     }
 
     public static String getDurationString(int seconds){
@@ -10,7 +10,10 @@ public class SecondsAndMinutes {
             int hour1 = seconds/3600;
             System.out.println("hours = "+hour1);
             return "";
-        } else return "Invalid";
+        } else {
+            System.out.println("Error");
+            return "";
+        }
     }
     public static String getDurationString(int minutes, int seconds){
         if ((seconds>=0 && seconds<=59) && minutes>=0){
@@ -20,10 +23,11 @@ public class SecondsAndMinutes {
             int rem_secs = total_secs%60;
 
             System.out.println(hour+"hr "+rem_mins+"m "+rem_secs+"s");
-            return "";//hour+"h "+ rem_mins+"m"+rem_secs+"s";
+            return hour+"h "+ rem_mins+"m"+rem_secs+"s";
         }
         else{
-            return "Invalid String";
+            System.out.println("Error");
+            return "";
         }
 
     }
