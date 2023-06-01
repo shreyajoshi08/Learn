@@ -131,37 +131,24 @@ public static boolean isLeapYear( int year){
 ****************************************************************************************
 //Exercise 9
 public class AreaCalculator {
-     
-
-public static double area(double radius){
-    
-    if(radius < 0)
-    {
-        return -1.0;
-    }
-    else
-    {
-        
-        double areaCalculated= radius * radius * Math.PI;
-        return areaCalculated;
-        
-    }
-}
-
-public static double area(double x, double y){
-    
-    if(x < 0 || y < 0)
-    {
-        return -1.0;
-    }
-    else
-    {
-        
-        double areaCalculated= x * y;
-        return areaCalculated;
-        
+    public static double area(double radius){
+        if(radius<0){
+            return -1.0;
+        }
+        else {
+            double area_of_circle = (Math.PI)*radius*radius;
+            return area_of_circle;
+        }
     }
     
-}
-
+    public static double area(double x, double y){
+        if(x <0 || y<0){
+           return -1.0;
+        }
+        else{
+            
+            double area_of_rect = x*y;
+            return area_of_rect;
+        }
+    }
 }
