@@ -1,0 +1,20 @@
+
+public class Main {
+    public static void main(String[] args) {
+        int value =6;
+        switch (value){
+            case (1):
+                System.out.println(value);
+                break;
+            case(2):
+                System.out.println(value);
+                break;
+            case 3: case4: case5:
+                System.out.println(value);
+                break;
+            default:
+                System.out.println("Not [1,5]");
+                break;
+        }
+    }
+}
