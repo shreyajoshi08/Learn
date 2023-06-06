@@ -1,0 +1,25 @@
+public class for_challenge {
+
+    public static void main(String[] args) {
+        //main body
+
+        int count = 0;
+        for (int num = 10; num <= 50; num++) {
+            if (isPrime(num)) {
+                count = count + 1;
+                System.out.println(num + " is a prime number.");
+            }
+        }System.out.println("Total prime numbers from 10-50 are: "+count);
+    }
+
+    public static boolean isPrime(int wholeNumber){
+        if(wholeNumber<=2){
+            return(wholeNumber==2);
+        }
+        for(int divisor = 2; divisor<wholeNumber; divisor++){
+            if(wholeNumber%divisor ==0) return false;
+        }
+
+        return true;
+    }
+}
