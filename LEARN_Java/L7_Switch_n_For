@@ -1,6 +1,5 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
-
 public class Main {
     public static void main(String[] args) {
         //case_1_2_3(6);
@@ -9,13 +8,19 @@ public class Main {
         int sum = 0;
         for (int count = 1; count <= 10; count++) {
             sum = count + sum;
+
         }
         System.out.println(sum);
 
         System.out.println(calInterest(10000, 2.7));
         for (double rate = 2; rate <= 5; rate++) {
             double interest = calInterest(10000, rate);
-            System.out.println("Interest at "+rate+" is: "+interest);
+            System.out.println("100$ at Interest of "+rate+" is: "+interest);
+        }
+
+        for( double r = 7.5; r <=10; r +=0.25){
+            double interest = calInterest(100, r);
+            System.out.println("100$ at Interest of "+r+" is: "+interest);
         }
     }
 
@@ -78,5 +83,5 @@ public class Main {
     public static double calInterest(double amt, double rate){
         return(amt*(rate/100));
     }
-    
+
 }
