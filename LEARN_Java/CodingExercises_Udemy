@@ -266,7 +266,7 @@ public class PlayingCat {
 **********************************************************************************************
 //Exercise 15
 
-
+public class SumOddRange{
     public static boolean isOdd(int a)
     {
         if(a<=0)
@@ -305,4 +305,4 @@ public class PlayingCat {
         
         }return sum;
     }
-    
+}    
