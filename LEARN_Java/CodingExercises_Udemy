@@ -265,44 +265,27 @@ public class PlayingCat {
 }
 **********************************************************************************************
 //Exercise 15
-
-public class SumOddRange{
-    public static boolean isOdd(int a)
-    {
-        if(a<=0)
-        {
+public class SumOddRange 
+{
+    public static boolean isOdd(int i){
+        if(i<0){
             return false;
         }
-        
-        else
-        {
-            if(a%2 !=0)
-            {
-                return true;
-            }
-            else{
-              return false;  
-            } 
+        else if(i%2==0){//checking if num is even
+                return false;
         }
+        else return true;
     }
     
-    public static int sumOdd(int start, int end)
-    {
-        int sum=0;
-        
-        if( start<0 || end< 0 || end<start){
-            return -1;
-        }
-        else
-        {
-            for(int i=start; i<=end; i++)
-            {
-            
-                if(isOdd(i)){
-                     sum = sum+i;            
+    public static int sumOdd(int start, int end){
+        int sum = 0;
+        if(start>0 && end>0 && end>=start){
+            for(int x = start; x<= end; x++){
+                if(isOdd(x)){
+                    sum  = sum +x;
                 }
-            }
-        
-        }return sum;
+            }return sum;
+        }
+        else return -1; 
     }
-}    
+}
