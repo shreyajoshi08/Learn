@@ -1,5 +1,4 @@
 
-
 import com.sun.jdi.PathSearchingVirtualMachine;
 
 //Coding Exercise
@@ -288,4 +287,35 @@ public class SumOddRange
         }
         else return -1; 
     }
+}
+**********************************************************************************************
+//Exercise 16
+
+public class NumberPalindrome {
+ 
+ public static boolean isPalindrome(int number){
+     int reverse=0, a;
+     int originalNum = number;
+     while(number!=0)
+     {
+         
+         a = number%10;
+         reverse *= 10;
+         reverse +=a;
+         number /= 10;
+     
+     }
+     if(originalNum ==reverse)
+     {
+         return true;
+     }
+     else
+     {
+         return false;
+     }
+     
+     
+ }
+ 
+ 
 }
