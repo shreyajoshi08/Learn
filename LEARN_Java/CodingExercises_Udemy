@@ -292,30 +292,40 @@ public class SumOddRange
 //Exercise 16
 
 public class NumberPalindrome {
+    public static boolean isPalindrome(int number){
+        int og = number;
+        int reverse = 0;
+        int store;
+        
+        while(number!=0){
+            store = number%10;
+            reverse = (reverse*10);
+            reverse = reverse+store;
+            number  = number /10;
+        }
+        if(og == reverse) return true;
+        else return false;
+    }
  
- public static boolean isPalindrome(int number){
-     int reverse=0, a;
-     int originalNum = number;
-     while(number!=0)
-     {
-         
-         a = number%10;
-         reverse *= 10;
-         reverse +=a;
-         number /= 10;
-     
-     }
-     if(originalNum ==reverse)
-     {
-         return true;
-     }
-     else
-     {
-         return false;
-     }
-     
-     
- }
- 
- 
+}
+**********************************************************************************************
+//Exercise 17
+public class FirstLastDigitSum {
+    
+    public static int sumFirstAndLastDigit(int number){
+        int sum = 0;
+        if (number < 0 ){
+            return -1;
+        } else if (number < 10){
+            sum = number * 2;
+        } else {
+            int lastDigit = number % 10;
+            int firstDigit = number;
+            while (firstDigit >=10){
+                firstDigit = firstDigit / 10;
+                sum = firstDigit + lastDigit;
+            }
+        }
+        return sum;
+    }
 }
