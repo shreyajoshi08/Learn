@@ -312,21 +312,22 @@ public class NumberPalindrome {
 **********************************************************************************************
 //Exercise 17
 public class FirstLastDigitSum {
-    
     public static int sumFirstAndLastDigit(int number){
-        int sum = 0;
-        if (number < 0 ){
-            return -1;
-        } else if (number < 10){
-            sum = number * 2;
-        } else {
-            int lastDigit = number % 10;
-            int firstDigit = number;
-            while (firstDigit >=10){
-                firstDigit = firstDigit / 10;
-                sum = firstDigit + lastDigit;
-            }
+        int first_num, last_num, sum = 0;
+        int length = String.valueOf(number).length();
+        int divisor = (length/10);
+        if (number<0){
+            sum= -1;
         }
-        return sum;
+        else if(number==0){
+            sum =  0;
+        }
+        else{
+            while(number>0){
+                first_num = number/divisor;
+                last_num = number%10;
+                sum = first_num+last_num;
+            }
+        }return sum;
     }
 }
