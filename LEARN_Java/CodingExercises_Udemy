@@ -376,9 +376,68 @@ public class SharedDigit {
             else
             {
                 return false;
-            }
+            }       
+        }
+    }
+}
+**********************************************************************************************
+//Exercise 20
+public class LastDigitChecker {
+    
+    public static boolean hasSameLastDigit(int x, int y, int z){
+        
+        if((x<10||x>1000)||(y<10||y>1000)||(z<10||z>1000))
+        {
+            return false;
+        }
+        
+        else
+        {
+            int x1,y1,z1;
+            x1= x%10;
+            y1=y%10;
+            z1=z%10;
             
+            if(x1==y1||x1==z1 || y1==z1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
     
+    public static boolean isValid(int num){
+        if(num<10 || num>1000)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+}
+**********************************************************************************************
+//Exercise 21
+public class FactorPrinter {
+    
+    public static void printFactors(int number){
+        if(number<1)
+        {
+            System.out.println("Invalid Value");
+        }
+        else
+        {
+            for(int i=1; i<=number; i++)
+            {
+                if(number%i == 0)
+                {
+                    System.out.println(i);
+                }
+            }
+        }
+    }   
 }
