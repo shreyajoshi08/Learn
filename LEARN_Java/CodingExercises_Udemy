@@ -28,7 +28,6 @@ public class PositiveNegativeZero {
             value = Math.round (kilometersPerHour/1.609);
             return value;
         }
-
     }
 
     public static void printConversion(double kilometersPerHour) {
