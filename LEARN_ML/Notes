@@ -1,0 +1,12 @@
+Machine Learning Process:
+  a. Data Pre-Processing
+    -  Import the data
+    -  Clean the data
+    -  Split into train and test sets
+  b. Modelling
+    -  Build Model
+    -  Train Model
+    -  Make predictions
+  c. Evaluation
+    - Calculate performance metrics
+    -  Make a verdict
