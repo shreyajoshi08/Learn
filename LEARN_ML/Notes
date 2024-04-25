@@ -10,3 +10,11 @@ Machine Learning Process:
   c. Evaluation
     - Calculate performance metrics
     -  Make a verdict
+
+__________________________________________________________________
+
+- Feature Scaling: 
+  * Only applied to columns
+  * 2 Types:
+    a. Normalization: (X-Xmin) / (Xmax-Xmin); It's range is [0,1]
+    b. Standardization: (X-Xavg) / (σ); σ is std. deviation. It's range is [-3, 3]. Only major outliers will fall beyond this range.
