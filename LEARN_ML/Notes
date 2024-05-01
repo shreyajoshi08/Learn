@@ -3,6 +3,8 @@ Machine Learning Process:
   a. Data Pre-Processing
     -  Import the data
     -  Clean the data
+        * Handling Missing Data
+        * Handling categorical data 
     -  Split into train and test sets
   b. Modelling
     -  Build Model
