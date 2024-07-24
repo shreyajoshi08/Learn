@@ -21,7 +21,7 @@ print(x)
 print(y)
 #Finding and handling missing data
 missing_data = dataset.isnull().sum() #To check for missing data and it's count
-print("missing data: ", missing_data)
+print(missing_data)
 from sklearn.impute import SimpleImputer
 #Creating an instance of this class 
 # Creating an object of a class, here imputer is an object
