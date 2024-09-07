@@ -21,10 +21,10 @@ regressor.fit(x_train, y_train) #it trains the model; it's a method of linear re
 print(x_train)
 print(y_train)
 ## Predicting the Test set results
-y_pred = regressor.predict(x_test)
+y_test_pred = regressor.predict(x_test)
 y_train_pred = regressor.predict(x_train)
 ## Visualising the Training set results
-print(y_pred)
+print(y_test_pred)
 print(y_test)
 
 plt.scatter(x_train,y_train, color = "red")
